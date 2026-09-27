@@ -1,0 +1,38 @@
+plugins {
+    id 'java-library'
+    id 'net.neoforged.moddev' version '2.0.144'
+}
+version = mod_version
+group = 'ru.egor.colonyguardposts'
+base { archivesName = 'colonyguardposts' }
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+repositories { mavenCentral() }
+neoForge {
+    version = '21.1.235'
+    unitTest { enable() }
+    parchment { mappingsVersion = '2024.11.17'; minecraftVersion = '1.21.1' }
+    runs {
+        gameTestServer {
+            type = 'gameTestServer'
+            sourceSet = sourceSets.test
+            gameDirectory = file('build/run-gametest')
+            systemProperty 'neoforge.enabledGameTestNamespaces', 'colonyguardposts,minecraft'
+        }
+    }
+    mods { colonyguardposts { sourceSet(sourceSets.main); sourceSet(sourceSets.test) } }
+}
+def mcJar = file(providers.environmentVariable('MINECOLONIES_JAR').getOrElse("${System.getenv('APPDATA')}/.minecraft/versions/Dungeon v1/mods/minecolonies-1.1.1374-1.21.1-snapshot.jar"))
+def support = fileTree(mcJar.parentFile) { include 'structurize-*.jar', 'blockui-*.jar', 'domum-ornamentum-*.jar', 'multipiston-*.jar' }
+dependencies {
+    implementation files(mcJar), support
+    testImplementation platform('org.junit:junit-bom:5.11.4')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+tasks.named('test', Test).configure { useJUnitPlatform() }
+tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8' }
+def metadataVersion = project.version.toString()
+tasks.named('processResources', ProcessResources).configure {
+    inputs.property('version', metadataVersion)
+    filesMatching('META-INF/neoforge.mods.toml') { expand(version: metadataVersion) }
+}

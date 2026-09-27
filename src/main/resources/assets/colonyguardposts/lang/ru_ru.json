@@ -1,0 +1,18 @@
+{
+  "colonyguardposts.tooltip.mode": "Казарма, режим «Охранять»: несколько постов",
+  "colonyguardposts.tooltip.edit": "ПКМ по полу: добавить · Shift+ПКМ: удалить",
+  "colonyguardposts.tooltip.clear": "Shift+ПКМ по блоку своей башни: сбросить посты",
+  "colonyguardposts.added": "Добавлен пост №%s: %s. Стражники распределяются автоматически.",
+  "colonyguardposts.removed": "Пост удалён. Осталось постов: %s.",
+  "colonyguardposts.cleared": "Посты сброшены. Стражники охраняют свою башню.",
+  "colonyguardposts.exists": "Пост уже отмечен. Shift+ПКМ по нему удаляет пост.",
+  "colonyguardposts.missing": "Здесь нет поста этой башни.",
+  "colonyguardposts.limit": "Для одной башни можно отметить до %s постов.",
+  "colonyguardposts.denied": "Для изменения постов нужно право управления зданиями этой колонии.",
+  "colonyguardposts.too_far_player": "Подойди ближе к выбранному блоку.",
+  "colonyguardposts.too_far_tower": "Это место за пределами дальности патруля башни.",
+  "colonyguardposts.outside": "Пост должен находиться на территории своей колонии.",
+  "colonyguardposts.unsafe": "Выбери твёрдый безопасный пол с двумя свободными блоками над ним.",
+  "colonyguardposts.stale": "Список постов изменился. Скипетр обновлён; повтори действие.",
+  "colonyguardposts.dimension": "Скипетр привязан к колонии в другом измерении."
+}

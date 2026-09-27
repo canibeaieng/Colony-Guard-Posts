@@ -1,0 +1,16 @@
+.gradle/
+build/
+run/
+libs/
+.idea/
+.vscode/
+*.iml
+*.log
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
+!dist/colonyguardposts-*.jar
+.env
+.env.*
+!.env.example
+Thumbs.db
+.DS_Store

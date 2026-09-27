@@ -1,0 +1,18 @@
+{
+  "colonyguardposts.tooltip.mode": "Barracks tower, Guard task: multiple posts",
+  "colonyguardposts.tooltip.edit": "Right-click floor: add · Sneak + right-click: remove",
+  "colonyguardposts.tooltip.clear": "Sneak + right-click your tower's hut block: clear posts",
+  "colonyguardposts.added": "Added post #%s: %s. Guards are distributed automatically.",
+  "colonyguardposts.removed": "Post removed. Remaining posts: %s.",
+  "colonyguardposts.cleared": "Posts cleared. Guards now defend their tower.",
+  "colonyguardposts.exists": "This post is already marked. Sneak + right-click to remove it.",
+  "colonyguardposts.missing": "This tower has no post here.",
+  "colonyguardposts.limit": "A tower can have up to %s posts.",
+  "colonyguardposts.denied": "You need permission to manage this colony's buildings.",
+  "colonyguardposts.too_far_player": "Move closer to the selected block.",
+  "colonyguardposts.too_far_tower": "This location exceeds the tower's patrol range.",
+  "colonyguardposts.outside": "Posts must be inside your colony's territory.",
+  "colonyguardposts.unsafe": "Choose a safe solid floor with two clear blocks above it.",
+  "colonyguardposts.stale": "Posts have changed. The scepter is updated; repeat your action.",
+  "colonyguardposts.dimension": "This scepter belongs to a colony in another dimension."
+}

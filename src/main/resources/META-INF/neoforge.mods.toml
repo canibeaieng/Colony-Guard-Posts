@@ -1,0 +1,29 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="All Rights Reserved"
+[[mods]]
+modId="colonyguardposts"
+version="${version}"
+displayName="Colony Guard Posts"
+authors="Egor"
+description='''Multiple persistent guard posts with automatic distribution for MineColonies barracks towers.'''
+[[dependencies.colonyguardposts]]
+modId="neoforge"
+type="required"
+versionRange="[21.1.235,)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.colonyguardposts]]
+modId="minecraft"
+type="required"
+versionRange="[1.21.1]"
+ordering="NONE"
+side="BOTH"
+[[dependencies.colonyguardposts]]
+modId="minecolonies"
+type="required"
+versionRange="[1.1.1374-1.21.1-snapshot]"
+ordering="AFTER"
+side="BOTH"
+[[mixins]]
+config="colonyguardposts.mixins.json"
