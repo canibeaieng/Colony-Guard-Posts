@@ -4,7 +4,7 @@
   <img src="art/colony-guard-posts-logo-v1.png" alt="Colony Guard Posts" width="240">
 </p>
 
-Отдельный аддон для Minecraft 1.21.1 / NeoForge 21.1.235 и MineColonies 1.1.1374-1.21.1-snapshot. Не зависит от workerhire или ColonieSquad.
+Отдельный аддон для Minecraft 1.21.1 / NeoForge 21.1.235 и MineColonies 1.1.1374-1.21.1-snapshot. 
 
 ## Скачать и установить
 
@@ -55,15 +55,3 @@ Linux/macOS:
 export MINECOLONIES_JAR='/path/to/mods/minecolonies-1.1.1374-1.21.1-snapshot.jar'
 ./gradlew build runGameTestServer --no-daemon
 ```
-
-GameTest использует отдельный мир `build/run-gametest`. Сохранения обычной игры не используются. Результат сборки: `build/libs/colonyguardposts-1.0.0.jar`. В production JAR включается только `src/main`; тесты остаются в `src/test`.
-
-Без переменной `MINECOLONIES_JAR` сборка ищет зависимость в локальной Windows-сборке `%APPDATA%/.minecraft/versions/Dungeon v1/mods`.
-
-Для версии 1.0.0 прошли 6 JUnit и 4 GameTest: равномерное распределение и сохранение назначений, обработка штатного скипетра, серверные права и ревизия, дальность/территория/измерение, навигация к персональному посту, совместимость с патрулём и одиночной башней.
-
-## Логотип и лицензия
-
-[PNG с прозрачным фоном](art/colony-guard-posts-logo-v1.png) создан встроенным imagegen; [промпт](art/logo-v1-prompt.txt).
-
-Лицензия проекта: **All Rights Reserved**, как указано в метаданных аддона.
